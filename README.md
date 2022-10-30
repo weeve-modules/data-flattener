@@ -91,12 +91,16 @@ Input to this module is:
 ```json
 [
     {
-        "temperature": 12,
-        "volume": 1
+        "location": {
+            "city": "Berlin",
+            "country": "Germany"
+        }
     },
     {
-        "temperature": 15,
-        "volume": 3.2
+        "device": {
+            "name": "RaspberryPi",
+            "id": "dasc4d4a"
+        }
     }
 ]
 ```
@@ -125,10 +129,14 @@ If `PARENTNESS = /` then output of this module is:
 * array of JSON body objects, example:
 
 ```json
-{
-    "0/temperature": 12,
-    "0/volume": 1,
-    "1/temperature": 15,
-    "1/volume": 3.2
-}
+[
+    {
+        "location/city": "Berlin",
+        "location/country": "Germany"
+    },
+    {
+        "device/name": "RaspberryPi",
+        "device/id": "dasc4d4a"
+    }
+]
 ```
