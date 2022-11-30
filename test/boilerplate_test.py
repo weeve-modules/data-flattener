@@ -50,7 +50,7 @@ def test_container_pipeline(start_stop_containers):
 
 def test_wrong_address(start_stop_containers):
     with raises(exceptions.ConnectionError):
-        post(url="http://boilerplate_test_container", json=input_data)
+        post(url="http://data-flattener_test_container", json=input_data)
 
 
 def test_wrong_port(start_stop_containers):
