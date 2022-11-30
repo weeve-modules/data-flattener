@@ -28,7 +28,7 @@ The following module configurations can be provided in a data service designer s
 
 | Name                 | Environment Variables     | type     | Description                                              |
 | -------------------- | ------------------------- | -------- | -------------------------------------------------------- |
-| Parentness    | PARENTNESS         | string   | Symbol for indicating parentness in your nested data, i.e. if parentness is `/` then data `{'location': {'city': 'Berlin'}}` will be flattened to `{'location/city': 'Berlin'}`            |
+| Delimiter    | DELIMITER         | string   | Symbol for indicating parentness delimiter in your nested data, i.e. if delimiter is `/` then data `{'location': {'city': 'Berlin'}}` will be flattened to `{'location/city': 'Berlin'}`            |
 
 
 
@@ -107,7 +107,7 @@ Input to this module is:
 
 ## Output
 
-If `PARENTNESS = /` then output of this module is:
+If `DELIMITER = /` then output of this module is:
 
 * JSON body single object, example:
 

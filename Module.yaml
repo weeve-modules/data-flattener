@@ -12,9 +12,9 @@ image:
   homepage: 'https://hub.docker.com/r/weevenetwork/data-flattener'      # Image homepage from the docker registry.
 repository: 'https://github.com/weeve-modules/data-flattener'     # Repository URL to source code.
 envs:
-  - name: Parentness
-    key: PARENTNESS
-    description: "Symbol for indicating parentness in your nested data, i.e. if parentness is / then data {'location': {'city': 'Berlin'}} will be flattened to {'location/city': 'Berlin'}"
+  - name: Delimiter
+    key: DELIMITER
+    description: "Symbol for indicating parentness delimiter in your nested data, i.e. if delimiter is / then data {'location': {'city': 'Berlin'}} will be flattened to {'location/city': 'Berlin'}"
     value: '/'
     type: 'select'
     options:
