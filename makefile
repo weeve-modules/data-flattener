@@ -1,6 +1,6 @@
 SHELL := /bin/bash # to enable source command in run_app
 
-MODULE=weevenetwork/boilerplate
+MODULE=weevenetwork/data-flattener
 VERSION_NAME=v1.0.0
 
 install_dev:
@@ -38,7 +38,7 @@ stop_docker_compose:
 
 run_test:
 	# For more verbose output you can add [-s] option
-	pytest test/boilerplate_test.py -v
+	pytest test/data-flattener_test.py -v
 .phony: run_test
 
 push_latest:

@@ -1,5 +1,5 @@
 """
-This is the listener to which the module boilerplate would POST to.
+This is the listener to which the module data-flattener would POST to.
 The data received by the listener is written to json file.
 """
 

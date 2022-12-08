@@ -1,15 +1,15 @@
 version: "3.0"
 networks:
   default:
-    name: boilerplate_network
+    name: data-flattener_network
 services:
 
-  boilerplate:
-    # image: weevenetwork/boilerplate
+  data-flattener:
+    # image: weevenetwork/data-flattener
     build:
       context: ../
       dockerfile: docker/Dockerfile
-    container_name: boilerplate_test_container
+    container_name: data-flattener_test_container
     ports:
       - 80:80
     env_file:

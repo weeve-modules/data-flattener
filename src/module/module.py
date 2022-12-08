@@ -6,9 +6,9 @@ Edit this file to implement your module.
 """
 
 from logging import getLogger
+from .flattener import flattener
 
 log = getLogger("module")
-
 
 def module_main(received_data: any) -> [any, str]:
     """
@@ -27,9 +27,24 @@ def module_main(received_data: any) -> [any, str]:
     log.debug("Processing ...")
 
     try:
-        # YOUR CODE HERE
+        if type(received_data) == list:
+            processed_data = []
 
-        processed_data = received_data
+            for data in received_data:
+                flattened = flattener(data, "")
+
+                # in case of flattener returning error
+                if type(flattened) == str:
+                    return None, flattened
+
+                processed_data.append(flattened)
+
+        else:
+            processed_data = flattener(received_data, "")
+
+            # in case of flattener returning error
+            if type(processed_data) == str:
+                return None, processed_data
 
         return processed_data, None
 
