@@ -3,7 +3,7 @@
 |                |                                       |
 | -------------- | ------------------------------------- |
 | Name           | Data Flattener                           |
-| Version        | v1.0.0                                |
+| Version        | v1.0.1                                |
 | DockerHub | [weevenetwork/data-flattener](https://hub.docker.com/r/weevenetwork/data-flattener) |
 | Authors        | Jakub Grzelak                   |
 
